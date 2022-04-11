@@ -1,22 +1,18 @@
 @font-face {
-  font-family: 'TTLakes Medium';
-  font-style: normal;
-  font-weight: normal;
-  src: local('TTLakes-Medium'),
+  font-family: 'TTLakes';
+  src: url('/fonts/TTLakes-Medium.eot') format('embedded-opentype'),
   url('/fonts/TTLakes-Medium.woff') format('woff'),
-  url('/fonts/TTLakes-Medium.ttf') format('ttf'),
-  url('/fonts/TTLakes-Medium.eot') format('eot');
-  font-display: swap;
+  url('/fonts/TTLakes-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'TTLakes Bold';
-  font-style: normal;
+  font-family: 'TTLakes';
+  src: url('/fonts/TTLakes-Bold.eot') format('embedded-opentype'),
+  url('/fonts/TTLakes-Bold.woff') format('woff');
   font-weight: bold;
-  src: local('TTLakes-Bold'),
-  url('/fonts/TTLakes-Bold.woff') format('woff'),
-  url('/fonts/TTLakes-Bold.eot') format('eot');
-  font-display: swap;
+  font-style: normal;
 }
 
 html {
@@ -24,7 +20,7 @@ html {
 }
 
 body {
-  font-family: 'TTLakes Medium', sans-serif;
+  font-family: "TTLakes", sans-serif;
   margin: 0;
   min-height: 663px;
 }
@@ -66,11 +62,6 @@ body {
   content: url("assets/images/highlight.svg");
 }
 
-.menu__item_active {
-  font-family: 'TTLakes Medium', sans-serif;
-  color: #7E7E82;
-}
-
 .header__button:hover,
 .footer-Buttons__button:hover {
   transform: scale(1.04);
@@ -100,9 +91,6 @@ body {
 }
 
 .menu__list {
-  font-family: "TTLakes", sans-serif;
-  font-style: normal;
-  font-weight: normal;
   margin-top: 48px;
   padding-left: 0;
 }
@@ -120,6 +108,10 @@ body {
   color: black;
 }
 
+.menu__item_active a {
+  color: #7E7E82;
+}
+
 .menu__item a:hover{
   color: white;
 }
@@ -135,16 +127,19 @@ body {
 }
 
 .footer__mail {
-  font-family: "TTLakes Medium", sans-serif;
+  font-family: "TTLakes", sans-serif;
+  font-size: 16px;
+  line-height: 32px;
+  color: #000000;
   padding: 0;
   margin-bottom: 12px;
   margin-top: 0;
   text-decoration: none;
-  color: black;
+  cursor: pointer;
 }
 
-.footer__phone-Number {
-  font-family: "TTLakes Bold", sans-serif;
+.footer__phone-number {
+  font-weight: bold;
   font-size: 24px;
   padding: 0;
   margin-bottom: 0;
@@ -154,7 +149,6 @@ body {
 }
 
 .footer__lang__button {
-  font-family: "TTLakes", sans-serif;
   font-weight: normal;
   padding: 0;
   margin-bottom: 32px;
@@ -164,9 +158,11 @@ body {
 }
 
 .footer__mail:hover,
-.footer__phone-Number:hover {
+.footer__phone-number:hover {
   background-color: #499ce1;
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.04);
+  transition-duration: 0.15s;
   cursor: pointer;
 }
 
